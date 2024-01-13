@@ -1,0 +1,13 @@
+.form-container{
+    max-width: 500px;
+    margin: auto;
+}
+
+.label{
+    background-color: lightblue;
+    width: auto;
+ }
+
+ .slider.round {
+    border-radius: 34px;
+  }

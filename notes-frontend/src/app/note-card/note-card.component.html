@@ -1,0 +1,38 @@
+
+<div class="form-container">
+    <br><br>
+    <label class="label">Selected Note</label><br><br>
+    
+    
+    <!--<div class="note-card-content">-->
+       
+        <div class="field">
+            <b> {{selectedNote.title}}</b>
+        </div>
+        
+        <div class="field">
+            <!-- <label for="search" class="label">Body </label>-->
+             <!--<div class="control">-->
+                <input type="text" name="title" 
+                 [(ngModel)]="selectedNote.title"><br>
+                 <textarea class="textarea" name="body" 
+                 [(ngModel)]="selectedNote.body" required>
+
+                 </textarea>
+             <!--</div>-->
+         </div>
+
+         <label class="label">Important</label> <br>
+         <input type="checkbox" [(ngModel)]="selectedNote.important"/>
+
+    <!--</div>-->
+
+    <div class="x-button">
+        <button (click)="onUpdateClick(selectedNote)">Edit</button>
+
+        <button (click)="onDeleteClick(selectedNote)">Delete</button>
+        <button (click)="goBack()">Back</button>
+
+    </div>
+
+</div>

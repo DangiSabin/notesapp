@@ -1,0 +1,16 @@
+const express = require('express')
+const cors = require('cors')
+const app = express()
+const routes = require('./routes')
+app.use(express.json())
+app.use(cors({origin:'*',   methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH'] }))
+
+app.use(routes)
+app.listen(3000, ()=>{
+    console.log('listening on http://localhost:3000')
+    console.log('Available paths:')
+    console.log('/login post')
+    console.log('/register post')
+    console.log('/notes/:id get and post')
+    console.log('/notes/note/:dateCreated get, patch and delete')
+})

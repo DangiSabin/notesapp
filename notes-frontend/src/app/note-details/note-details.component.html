@@ -1,0 +1,33 @@
+<div class="form-container">
+    <br><br>
+    <label class="label">New Note </label><br><br>
+    <form #noteForm="ngForm" (ngSubmit)="onSubmit(noteForm)">
+        <div class="field">
+           <!--<label class="label">Title </label>--> 
+            <div class="control">
+                <input type="text" name="title" [(ngModel)]="note.title" class="input"  placeholder="Enter Note Title" required>
+            </div>
+        </div>
+        <span>{{ currentDate|date}}</span>
+        <div class="field">
+           <!-- <label for="search" class="label">Body </label>-->
+            <div class="control">
+                <textarea class="textarea" name="body" [(ngModel)]="note.body" placeholder="Enter Note" required></textarea>
+            </div>
+        </div>
+
+      <!-- <p>{{ note.title}}</p>
+       <p>{{ note.body}}</p>-->
+
+        <div class="field">
+           <!-- <button type="button">Cancel</button>-->
+           <label class="label">Important</label> <br>
+           <input type="checkbox" id="switch"/>
+           
+           <br>
+            <button type="submit">Add Note</button>
+            <button (click)="goBack()">Back</button>
+        </div>
+
+    </form>
+</div>

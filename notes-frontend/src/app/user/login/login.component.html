@@ -1,0 +1,19 @@
+<p>{{message}}</p>
+<h2>User Login</h2>
+<form (ngSubmit)="onSubmit()">
+  <div>
+    <label for="username" class="label">User Name</label><br>
+    <input type="text" id="username" name="username" [(ngModel)]="username" required>
+  </div><br>
+  <div>
+    <label for="password" class="label">Password</label><br>
+    <input type="password" id="password" name="password" [(ngModel)]="password" required>
+  </div>
+  <br>
+  <div>
+    <button type="submit">Login</button>
+  </div>
+  <div class="register-link" >
+    Don't have an account? <a routerLink="/register">Register</a>
+  </div>
+</form>

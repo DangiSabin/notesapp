@@ -1,0 +1,32 @@
+.list-label{
+    background-color: lightblue;
+}
+
+.main-container{
+    margin: auto;
+}
+.notes-title{
+    /*font-size: 10px;*/
+    font-weight: bold;
+}
+
+.notes-body {
+    position: relative;
+    color: #555;
+    max-height: 80px;
+    overflow: hidden;
+}
+
+.note-card-container {
+    background: white;
+    border:1px solid;
+    padding: 2px;
+    width: 180px;
+    background-color: pink;
+}
+
+.heart::before {
+    content: "\2665";
+}
+
+

@@ -1,0 +1,30 @@
+<div class="main-container">
+<div >
+    <br>
+    <label for="search" class="list-label">Search for a note </label><br>
+    <input type="text" id="search" name="search"
+    placeholder="Enter note title"
+    (input)="searchNotes($event)" />Search<br><br>
+</div>
+<!-- display note -->
+<div class="note-card-container" *ngFor="let note of filteredNotes" (click)="onNoteClick(note)">
+ <!--<p>Showing Searched Note </p>-->
+ <p>{{note.title}}</p>
+ <!--<p>{{note.body}}</p>-->
+</div>
+    
+
+<div class="notes-list">
+    <label for="search" class="list-label">All notes</label><br>
+   <!--add node card <app-note-card></app-note-card>-->
+   <div class="note-card-container" *ngFor="let item of getItems()" (click)="onNoteClick(item)">
+     <b class="notes-title">{{item.title}}</b> <div class="heart" *ngIf="item.important"></div>
+    
+     <p class="notes-body">{{item.body}}</p>
+   </div>
+</div>
+<div >
+  <button (click)="addNoteHandler()">New Note</button>
+   
+</div>
+</div>

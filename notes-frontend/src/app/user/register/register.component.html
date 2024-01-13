@@ -1,0 +1,41 @@
+<!--<p>register works!</p>-->
+<p>{{message}}</p>
+
+<h2>User Registration</h2>
+<form (ngSubmit)="onSubmit()" [formGroup]="registerForm">
+  <div>
+    <label for="username" class="label">User Name</label><br>
+    <input type="text" id="username" name="username" [(ngModel)]="username" formControlName="username">
+    <span
+        *ngIf="registerForm.controls['username']?.errors?.['required'] && registerForm.controls['username']?.touched">{{errMessages.requiredUsername}}</span>
+    <span
+        *ngIf="registerForm.controls['username']?.errors?.['unique'] === false">{{errMessages.uniqueUsername}}</span>
+</div>
+  <br>
+  <div>
+    <label for="password" class="label">Password</label><br>
+    <input type="password" id="password" name="password" [(ngModel)]="password" formControlName="password">
+    <span
+         *ngIf="registerForm.controls['password']?.errors?.['required'] && registerForm.controls['password']?.touched">{{errMessages.requiredPassword}}</span>
+    <span
+        *ngIf="registerForm.controls['password']?.errors?.['pattern']">{{errMessages.passwordPattern}}</span>
+</div>
+  <br>
+  <div>
+    <label for="newpassword" class="label">Confirm Password</label><br>
+    <input type="password" id="confirm" name="confirm" [(ngModel)]="confirm" formControlName="confirm">
+    <span
+        *ngIf="registerForm.controls['confirm']?.errors?.['required'] && registerForm.controls['confirm']?.touched">{{errMessages.requiredConfirm}}</span>
+
+
+</div>
+<span *ngIf="registerForm.errors?.['confirm'] === false">{{errMessages.confirmMatch}}</span>
+  <br>
+  <div>
+    <button type="submit">Register</button>
+  </div>
+  <div class="register-link">
+    Already have account? <a routerLink="/login">Login</a>
+  </div>
+ 
+</form>

@@ -1,0 +1,28 @@
+
+.note-card-container{
+ border-radius: 5px;
+ background-color: white;
+ box-shadow: 0px 2px 15px 2px ;
+ max-width: 500px;
+ margin: auto;
+}
+
+.form-container{
+    max-width: 500px;
+    margin: auto;
+}
+
+.note-card-content{
+   padding: 25px;
+}
+
+.x-button{
+    position: absolute;  
+}
+
+.label{
+    background-color: lightblue;
+    width: auto;
+ }
+
+ 

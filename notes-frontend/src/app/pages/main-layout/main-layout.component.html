@@ -1,0 +1,20 @@
+<div class="main-container">
+   
+    <br>
+    <label for="search" class="list-label">Important Notes Entered</label><br><br>
+
+    <div>
+        <div class="favorite-notes-slider">
+            <div class="slide"  *ngFor="let note of favoriteNotes" >
+                <p>{{ note.title }}</p><div class="heart" *ngIf="note.important"></div>
+                <p>{{ note.body }}</p>
+            </div>
+        </div>
+        
+    </div> 
+   
+
+   
+</div>
+<br><label for="search" class="list-label">Notes you've recently entered</label><br>
+
